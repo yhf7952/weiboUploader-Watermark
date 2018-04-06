@@ -6,6 +6,8 @@
 
 https://yantuz.cn/weiboUploader-Watermark/
 
+**以上地址仅供演示，长期使用建议自己搭建服务器。上传的所有图片将在我的服务器上留备份**
+
 ![演示效果](https://ws4.sinaimg.cn/large/007452UMly1fq2owsrv0ij30m80lbwi7.jpg)
 
 # 环境要求
