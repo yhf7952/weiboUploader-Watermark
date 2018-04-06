@@ -1,0 +1,6 @@
+{
+    "require": {
+        "intervention/image": "^2.4",
+        "consatan/weibo_image_uploader": "^1.0"
+    }
+}
