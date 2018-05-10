@@ -52,7 +52,7 @@ if ($_COOKIE["WmEnable"] == "on"){
 }
 // save image
 //$WmImg = $img->response();
-$dir = 'upload/'.Date('Y/m');
+$dir = 'upload';//.Date('Y/m');
 if(!is_dir($dir))
     mkdir($dir,0777,true);
 $WmImg = $dir.'/'.uniqid().'.'.$extension;
@@ -65,6 +65,9 @@ $weibo = new Consatan\Weibo\ImageUploader\Client();
 //$url = $weibo->upload($WmImg, '微博帐号', '微博密码');
 
 $url = $weibo->upload($WmImg, $wbUser, $wbPwd);
+//删除文件
+unlink($WmImg);
+
 echo json_encode($url);
 
 // try{
