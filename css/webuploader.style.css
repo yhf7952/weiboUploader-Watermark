@@ -370,9 +370,9 @@ table {
 
 #uploader .statusBar .btns {
     position: absolute;
-    top: 10px;
+    top: 14px;
     right: 20px;
-    line-height: 40px;
+    line-height: 32px;
 }
 
 #filePicker2 {

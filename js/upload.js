@@ -167,13 +167,13 @@
 
         //上传成功时，接收服务器返回值
         uploader.on('uploadSuccess',function(file, response){
-            // console.log(response);
-            // console.log(file);
-            // console.log(file.id);
+             console.log(response);
+             //console.log(file);
+             //console.log(file.id);
                 //添加链接地址
             var id = file.id;
             $("#"+id).append('<div class="input-group">'+
-            '<input type="text" id="'+id+'text" class="form-control" placeholder="地址" value="'+response+'">'+
+            '<input type="text" id="'+id+'text" class="form-control imglist" placeholder="地址" data-value="'+response+'" value=\''+setUrlType(response)+'\'>'+
             '<span class="input-group-btn">'+
             '<button class="btn btn-default copytxt" data-clipboard-target="#'+id+'text" type="button"><i class="glyphicon glyphicon-copy"></i></button>'+
             '</span>'+
@@ -442,6 +442,58 @@
 
             $info.html( text );
         }
+
+        function setType(t){
+            //批量删加深            
+            var elms = $(".styleGroup").children();
+            elms.removeClass("btn-primary");  
+            if(t==null){
+                var urlType = $.cookie("urlType") || "default";
+                $(".styleGroup button").each(function(){
+                    if($(this).data("type") ==urlType){
+                        $(this).addClass("btn-primary")
+                    }
+                })
+            }else{
+                //设置cookie          
+                $(t).addClass("btn-primary");
+                $.cookie("urlType",$(t).data("type"));
+                $(".imglist").each(function(){
+                    $(this).val(setUrlType($(this).data("value")).replace("&quot;","\""));
+                });
+            }
+        }
+        setType(null);
+
+        //根据设置，生成URL
+        function setUrlType(url){
+            var urlType = $.cookie("urlType") || "default";
+            switch(urlType){
+                case "html":
+                    return ('<img src="'+url+'"/>');
+                case "ubb":
+                    return ('[IMG]'+url+'[/IMG]');
+                case "markdown":
+                    return ('![]('+url+')');
+                default:
+                    return url;
+            }
+        }
+
+        $(".styleGroup button").click(function(){
+            setType(this);
+        });
+
+        //复制全部
+        new ClipboardJS('#copyAll',{
+            text: function(trigger) {
+                var urls = "";
+                $(".imglist").each(function(){
+                    urls += $(this).val()+"\n";
+                });
+                return urls;
+            }
+        });
 
         function reSetOptions(){
             //限制最大宽度800
