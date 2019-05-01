@@ -1,14 +1,21 @@
-# 微博图床
+# 微博图床/本地图床
 
 基于PHP的新浪微博图床批量传图工具，上传-缩放-水印-生成链接一键搞定
 
 # 演示地址
 
-https://yantuz.cn/weiboUploader-Watermark/
+微博图床：https://yantuz.cn/weiboUploader-Watermark/
+本地版：https://img1.yantuz.cn/
 
-**以上地址仅供演示，长期使用建议自己搭建服务器。上传的所有图片将在我的服务器上留备份**
+**以上地址仅供演示，长期使用建议自己搭建服务器。上传的所有图片不定期清理**
 
 ![演示效果](https://ws4.sinaimg.cn/large/007452UMly1fq2owsrv0ij30m80lbwi7.jpg)
+
+# 更新日志
+2019/5/1：
+增加[本地版](https://github.com/yhf7952/weiboUploader-Watermark/tree/%E6%9C%AC%E5%9C%B0%E7%89%88)
+支持图片HTML/UBB/MarkDown格式自由切换
+支持上传图片批量复制
 
 # 环境要求
 
