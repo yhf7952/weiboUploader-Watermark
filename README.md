@@ -4,11 +4,11 @@
 
 # 演示地址
 
-https://yantuz.cn/weiboUploader-Watermark/
+https://bak.yantuz.cn:8000/weiboUploader-Watermark/
 
 **以上地址仅供演示，长期使用建议自己搭建服务器。上传的所有图片将在我的服务器上留备份**
 
-![演示效果](https://ws4.sinaimg.cn/large/007452UMly1fq2owsrv0ij30m80lbwi7.jpg)
+![演示效果](https://bak.yantuz.cn:8000/img/upload/2019/05/5cc8f9e6f23ff.jpg)
 
 # 环境要求
 
@@ -32,6 +32,6 @@ H5上传页：http://fex.baidu.com/webuploader/
 
 # 详细介绍/讨论
 
-* https://yantuz.cn/376.html
+* https://bak.yantuz.cn:8000/376.html
 * 博客：[岩兔站](https://yantuz.cn "岩兔站-关注互联网折腾服务器分享码农的日常")
-* 微博：[新浪微博](https://weibo.com/yztop "岩兔站")
+* 微博：[新浪微博](https://weibo.com/yantuz "岩兔站")
